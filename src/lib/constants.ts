@@ -3,7 +3,7 @@ export const SITE_URL = "https://www.ceramicaleide.com.br";
 export const PHONE = "(31) 99905-4488";
 export const PHONE_RAW = "5531999054488";
 export const WHATSAPP_URL = `https://wa.me/${PHONE_RAW}?text=${encodeURIComponent("Olá! Gostaria de solicitar um orçamento de tijolos.")}`;
-export const EMAIL = "contato@ceramicaleide.com.br";
+export const EMAIL = "marcospaulo.henriques@gmail.com";
 
 export const ADDRESS = {
   street: "São José de Pedras nº 970",

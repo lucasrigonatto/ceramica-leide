@@ -19,6 +19,8 @@
 
 # production
 /build
+ceramica-leide-hostinger.zip
+ceramica-leide-hostinger/
 
 # misc
 .DS_Store

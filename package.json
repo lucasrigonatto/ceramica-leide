@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "export": "next build"
+    "export": "next build",
+    "typecheck": "tsc --noEmit",
+    "test:export": "node scripts/check-export.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.40.0",

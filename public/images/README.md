@@ -1,48 +1,17 @@
-# Pasta de imagens do site
+# Website images
 
-**Caminho completo no seu computador:**
+Store public website assets under `public/images/`. Files are served from `/images/`.
 
-```
-ceramica-leide/public/images/
-```
+## Folders and expected files
 
-No projeto Cursor, navegue até a pasta `public` → `images`.
+- `logo/logo.png`: primary company logo; a transparent background is recommended.
+- `hero/fachada-fabrica.jpg`: main factory banner.
+- `hero/cta-fabrica.jpg`: final contact section.
+- `produtos/tijolo-8-furos.jpg`: 8-hole brick.
+- `produtos/tijolo-12-furos.jpg`: 12-hole brick.
+- `galeria/fabrica-01.jpg` through `fabrica-06.jpg`: factory gallery.
+- `depoimentos/`: optional customer photos.
 
----
+Keep existing filenames when replacing an asset, or update the corresponding component and data entry. Use JPG or PNG for photos, compress files before committing, and aim for at least 1200 pixels on the longest side where the image appears at full width.
 
-## Estrutura
-
-| Pasta | O que colocar |
-|-------|----------------|
-| `logo/` | Logo da empresa (`logo.png` ou `logo.svg`) |
-| `hero/` | Fotos do banner principal e CTA |
-| `produtos/` | Fotos dos tijolos 8 e 12 furos |
-| `galeria/` | Fotos da fábrica (seção Estrutura) |
-| `depoimentos/` | Fotos de clientes (opcional) |
-
----
-
-## Arquivos esperados
-
-### `logo/`
-- `logo.png` — logo principal (recomendado: fundo transparente, ~400×120px)
-
-### `hero/`
-- `fachada-fabrica.jpg` — banner principal
-- `cta-fabrica.jpg` — seção final (CTA)
-
-### `produtos/`
-- `tijolo-8-furos.jpg` — Tijolo 8 Furos (9×19×29)
-- `tijolo-12-furos.jpg` — Tijolo 12 Furos (14×19×29)
-
-### `galeria/`
-- `fabrica-01.jpg` até `fabrica-06.jpg` — galeria da fábrica
-
----
-
-## Dicas
-
-- Formato: JPG ou PNG (logo com fundo transparente)
-- Resolução mínima: 1200px na maior lateral
-- Produtos: tijolos bem visíveis, furos aparentes, fundo neutro
-- Ao salvar com os nomes acima, o site passa a usar automaticamente
+Product photos should show the brick and its holes clearly. Use only images the business is entitled to publish. Run the production build and export check after changes.

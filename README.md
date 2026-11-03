@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cerâmica Leide — Business Website
 
-## Getting Started
+A responsive website for a brick manufacturer, built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+![Business website home page.](docs/screenshots/home.png)
+
+Business website home page.
+
+[Visit the website](https://www.ceramicaleide.com.br)
+
+## What problem did I solve?
+
+A potential customer needs to understand the products, check whether the company serves their region, and find a direct way to request a quote. I organized that information into one site with clear product sections, manufacturing context, service-area information, frequently asked questions, and contact links.
+
+## What is included?
+
+- Product information for 8-hole, 12-hole, and 16-hole bricks.
+- Factory and manufacturing-process sections.
+- Service regions and an interactive map.
+- Responsive navigation and direct contact actions.
+- Page metadata and a static export suitable for conventional hosting.
+
+## How do I know my solution works?
+
+The production build passes and produces a static site in `out/`. A post-build check verifies that the exported home page has working internal anchor targets, a canonical URL, and the local images it references. TypeScript validation and the export check run in GitHub Actions.
+
+These checks cover the delivered files and navigation structure. They do not measure customer conversion, prove commercial claims, or replace a manual mobile and contact-link review. I have not claimed sales or traffic improvements without analytics.
+
+## Run locally
+
+Requires Node.js 22 and npm.
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run typecheck
+npm run build
+npm run test:export
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy
 
-## Learn More
+The app uses `output: "export"` and generates `out/`. Upload that directory to a static host. Preview it with a local static server, for example:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+python -m http.server 8080 --directory out
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The static export does not use `next start`. It has no booking, checkout, or application database.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Maintain the content
 
-## Deploy on Vercel
+Business constants and contact settings are in `src/lib/constants.ts`. Product and section content lives under `src/data/` and the page components. Image naming and replacement instructions are in [public/images/README.md](public/images/README.md).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The customer-facing site is in Portuguese. Repository documentation is in English. Keep commercial specifications and contact details confirmed with the business when updating them.
